@@ -9,9 +9,7 @@ cur = con.cursor()
 
 print("Opened database successfully")
 
-
 client = discord.Client()
-
 
 
 @client.event
@@ -32,8 +30,7 @@ async def on_message(message):
         await message.reply('Hello!', mention_author=True)
 
     if msg.startswith('!done') or msg.startswith('!Done'):
-        await message.reply(
-            f'Well done, {message.author.display_name}'
-        )
+        await message.reply(f'Well done, {message.author.display_name}')
+
 
 client.run(os.environ['TOKEN_PASS'])
